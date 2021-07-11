@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\FlightsRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
 
-class FlightsController extends Controller
+class FlightsController extends BaseController
 {
 
     /**
@@ -37,6 +40,27 @@ class FlightsController extends Controller
      */
     public function index()
     {
-        return 'flights';
+        try {
+            $repo = new FlightsRepository();
+            $flights = $repo->all();
+
+            $response = [
+                'flights' => $flights,
+                'groups' => [],
+                'totalGroups' => 0,
+                'totalFlights' => count($flights),
+                'cheapestPrice' => 0,
+                'cheapestGroup' => 0,
+
+            ];
+
+            return $this->response($response, 200);
+        }
+        catch (\Exception $e){
+
+            return $this->response([
+                'message' => $e->getMessage()
+            ], 500);
+        }
     }
 }
