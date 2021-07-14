@@ -93,6 +93,36 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
+                            <div class="flex items-center">
+                                <i class="fab fa-laravel fa-2x"></i>
+                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">
+                                    <a href="/api/flights" class="underline text-gray-900 dark:text-white">API</a>
+                                </div>
+                            </div>
+
+                            <div class="ml-12">
+                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                                    Endpoint agrupamento de voos
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
+                            <div class="flex items-center">
+                                <i class="fab fa-angellist fa-2x"></i>
+                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">
+                                    Obrigado
+                                </div>
+                            </div>
+
+                            <div class="ml-12">
+                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                                    Desde já agradeço a oportunidade e <br> espero fazer parte da familia 123 <span style="font-size: 20px">&#x1F643;</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

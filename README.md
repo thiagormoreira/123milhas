@@ -18,8 +18,13 @@ php artisan serve
 O projeto de teste da API de agrupamento agora está instalado e funcionando.
 Acesse-o em:
 
+Apresentação:
 ``` bash
 http://localhost:8000/
+```
+API:
+``` bash
+http://localhost:8000/api/flights
 ```
 
 
