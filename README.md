@@ -54,3 +54,17 @@ Documentação Swagger online
 ``` bash
 https://teste-1-2-3-milhas.herokuapp.com/api/documentation
 ```
+
+# Testes PHPUnit
+
+Como de praxe, escrevi alguns testes basicos para demonstrar o uso do TDD
+
+``` bash
+php artisan test
+```
+
+Ou
+
+``` bash
+./vendor/bin/phpunit tests
+```
