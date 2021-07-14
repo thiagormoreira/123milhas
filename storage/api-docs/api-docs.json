@@ -25,7 +25,7 @@
                         }
                     },
                     "422": {
-                        "description": "Unprocessable entity"
+                        "description": "Unprocessable request"
                     },
                     "403": {
                         "description": "Unauthorized"
@@ -36,11 +36,108 @@
     },
     "components": {
         "schemas": {
+            "FlightData": {
+                "properties": {
+                    "id": {
+                        "description": "Id",
+                        "type": "integer"
+                    },
+                    "cia": {
+                        "description": "Companhia aérea",
+                        "type": "string"
+                    },
+                    "fare": {
+                        "description": "Tarifa",
+                        "type": "string"
+                    },
+                    "flightNumber": {
+                        "description": "Número do voo",
+                        "type": "string"
+                    },
+                    "origin": {
+                        "description": "Origem do voo",
+                        "type": "string"
+                    },
+                    "destination": {
+                        "description": "Destino do voo",
+                        "type": "string"
+                    },
+                    "departureDate": {
+                        "description": "Data de saida",
+                        "type": "string",
+                        "format": "date"
+                    },
+                    "arrivalDate": {
+                        "description": "Data de chegada",
+                        "type": "string",
+                        "format": "date"
+                    },
+                    "departureTime": {
+                        "description": "Hora de saida",
+                        "type": "string"
+                    },
+                    "arrivalTime": {
+                        "description": "Hora de chegada",
+                        "type": "string"
+                    },
+                    "classService": {
+                        "description": "Classe",
+                        "type": "integer"
+                    },
+                    "price": {
+                        "description": "Preço",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "tax": {
+                        "description": "Imposto",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "outbound": {
+                        "description": "Ida",
+                        "type": "boolean"
+                    },
+                    "inbound": {
+                        "description": "Volta",
+                        "type": "boolean"
+                    },
+                    "duration": {
+                        "description": "Duração do voo",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
             "GroupedFlightsData": {
                 "properties": {
                     "flights": {
-                        "description": "Id",
+                        "description": "Voos",
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FlightData"
+                        }
+                    },
+                    "groups": {
+                        "description": "Grupos de voos",
                         "type": "string"
+                    },
+                    "totalGroups": {
+                        "description": "Total de grupos",
+                        "type": "integer"
+                    },
+                    "totalFlights": {
+                        "description": "Total de voos",
+                        "type": "integer"
+                    },
+                    "cheapestPrice": {
+                        "description": "Preço do grupo mais barato",
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "cheapestGroup": {
+                        "description": "Id do grupo mais barato",
+                        "type": "integer"
                     }
                 },
                 "type": "object"

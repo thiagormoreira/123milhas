@@ -3,9 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\FlightsRepository;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Str;
 
 class FlightsController extends BaseController
 {
@@ -42,19 +39,10 @@ class FlightsController extends BaseController
     {
         try {
             $repo = new FlightsRepository();
-            $flights = $repo->all();
 
-            $response = [
-                'flights' => $flights,
-                'groups' => [],
-                'totalGroups' => 0,
-                'totalFlights' => count($flights),
-                'cheapestPrice' => 0,
-                'cheapestGroup' => 0,
+            $groups = $repo->groups();
 
-            ];
-
-            return $this->response($response, 200);
+            return $this->response($groups, 200);
         }
         catch (\Exception $e){
 
