@@ -109,6 +109,34 @@
                 },
                 "type": "object"
             },
+            "GroupData": {
+                "properties": {
+                    "uniqueId": {
+                        "description": "Id",
+                        "type": "string"
+                    },
+                    "totalPrice": {
+                        "description": "Preço total",
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "outbound": {
+                        "description": "Voos de Ida",
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FlightData"
+                        }
+                    },
+                    "inbound": {
+                        "description": "Voos de Volta",
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/FlightData"
+                        }
+                    }
+                },
+                "type": "object"
+            },
             "GroupedFlightsData": {
                 "properties": {
                     "flights": {
@@ -120,7 +148,10 @@
                     },
                     "groups": {
                         "description": "Grupos de voos",
-                        "type": "string"
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/GroupData"
+                        }
                     },
                     "totalGroups": {
                         "description": "Total de grupos",

@@ -19,8 +19,11 @@ class GroupedFlightsData
 
     /**
      * Grupos de voos
-     * @OA\Property(type="string")
-     * @var string
+     * @OA\Property(
+     *     type="array",
+     *     @OA\Items(ref="#/components/schemas/GroupData")
+     * )
+     * @var array
      */
     public $groups;
 
