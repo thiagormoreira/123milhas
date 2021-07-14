@@ -53,7 +53,7 @@
                             <div class="flex items-center">
                                 <i class="fas fa-columns fa-2x"></i>
                                 <div class="ml-4 text-lg leading-7 font-semibold">
-                                    <a href="#" class="underline text-gray-900 dark:text-white">Postman</a>
+                                    <a href="/123Milhas.postman_collection.json" class="underline text-gray-900 dark:text-white" download>Postman</a>
                                 </div>
                             </div>
 
@@ -82,7 +82,9 @@
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
                             <div class="flex items-center">
                                 <i class="fas fa-download fa-2x"></i>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Download</div>
+                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">
+                                    <a href="/Teste-ThiagoMoreira-123Milhas.zip" class="underline text-gray-900 dark:text-white" download>Download</a>
+                                </div>
                             </div>
 
                             <div class="ml-12">
