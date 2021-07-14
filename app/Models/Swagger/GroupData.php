@@ -16,11 +16,8 @@ class GroupData
 
     /**
      * Preço total
-     * @OA\Property(
-     *     type="number",
-     *     format="float"
-     * )
-     * @var number
+     * @OA\Property(type="integer")
+     * @var integer
      */
     public $totalPrice;
 

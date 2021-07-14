@@ -86,13 +86,11 @@
                     },
                     "price": {
                         "description": "Preço",
-                        "type": "number",
-                        "format": "double"
+                        "type": "integer"
                     },
                     "tax": {
                         "description": "Imposto",
-                        "type": "number",
-                        "format": "double"
+                        "type": "integer"
                     },
                     "outbound": {
                         "description": "Ida",
@@ -117,8 +115,7 @@
                     },
                     "totalPrice": {
                         "description": "Preço total",
-                        "type": "number",
-                        "format": "float"
+                        "type": "integer"
                     },
                     "outbound": {
                         "description": "Voos de Ida",
@@ -163,8 +160,7 @@
                     },
                     "cheapestPrice": {
                         "description": "Preço do grupo mais barato",
-                        "type": "number",
-                        "format": "double"
+                        "type": "integer"
                     },
                     "cheapestGroup": {
                         "description": "Id do grupo mais barato",

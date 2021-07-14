@@ -43,10 +43,7 @@ class GroupedFlightsData
 
     /**
      * Preço do grupo mais barato
-     * @OA\Property(
-     *     type="number",
-     *     format="double"
-     * )
+     * @OA\Property(type="integer")
      * @var integer
      */
     public $cheapestPrice;

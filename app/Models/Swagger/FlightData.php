@@ -92,20 +92,14 @@ class FlightData
 
     /**
      * Preço
-     * @OA\Property(
-     *     type="number",
-     *     format="double"
-     * )
+     * @OA\Property(type="integer")
      * @var integer
      */
     public $price;
 
     /**
      * Imposto
-     * @OA\Property(
-     *     type="number",
-     *     format="double"
-     * )
+     * @OA\Property(type="integer")
      * @var integer
      */
     public $tax;
